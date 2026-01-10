@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Beats | Next-Gen Discord Music</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+    
+    <nav id="navbar">
+        <div class="logo">
+            <span class="logo-text">Synapse<span class="highlight">Beats</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#commands">Commands</a>
+            <a href="#setup">Setup</a>
+            <a href="https://dsc.gg/axoninnova" class="nav-btn">Support</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge animate-up">AxonInnova Official</div>
+            <h1 class="animate-up">The Future of <span class="gradient-text">Music</span> is Here</h1>
+            <p class="animate-up delay-1">Experience high-fidelity audio, seamless controls, and advanced filters with the most powerful Discord music bot ever built.</p>
+            <div class="hero-btns animate-up delay-2">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=1459474477493518503&permissions=8&scope=bot%20applications.commands" class="btn primary"><i class="fab fa-discord"></i> Add to Discord</a>
+                <a href="#setup" class="btn secondary">Quick Setup</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="music-visualizer">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+            <div class="glow-circle"></div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">Premium Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card" data-tilt>
+                <i class="fas fa-bolt"></i>
+                <h3>Slash Commands</h3>
+                <p>Full support for modern Discord Slash commands for a seamless user experience.</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <i class="fas fa-wave-square"></i>
+                <h3>High Fidelity</h3>
+                <p>Lossless 320kbps audio quality through high-performance Lavalink SSL nodes.</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <i class="fas fa-music"></i>
+                <h3>Multi-Source</h3>
+                <p>Seamlessly stream from Spotify, SoundCloud, Apple Music, and more.</p>
+            </div>
+            <div class="feature-card" data-tilt>
+                <i class="fas fa-sliders-h"></i>
+                <h3>Pro Filters</h3>
+                <p>Advanced DSP filters including Bassboost, Nightcore, 8D, and Vaporwave.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="commands">
+        <h2 class="section-title">Powerful Commands</h2>
+        <div class="tabs-container">
+            <div class="tab-header">
+                <button class="tab-btn active" onclick="openTab('music')">Music</button>
+                <button class="tab-btn" onclick="openTab('filters')">Filters</button>
+                <button class="tab-btn" onclick="openTab('settings')">Settings</button>
+            </div>
+            <div id="music" class="tab-content active">
+                <div class="command-item">
+                    <span class="cmd-name">/play [song]</span>
+                    <span class="cmd-desc">Plays any song or playlist from your favorite platforms.</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd-name">/queue</span>
+                    <span class="cmd-desc">View and manage the upcoming music tracks.</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd-name">/skip</span>
+                    <span class="cmd-desc">Instantly jump to the next song in the queue.</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd-name">/nowplaying</span>
+                    <span class="cmd-desc">Get detailed info about the currently playing track.</span>
+                </div>
+            </div>
+            <div id="filters" class="tab-content">
+                <div class="command-item">
+                    <span class="cmd-name">/bassboost</span>
+                    <span class="cmd-desc">Enhance the low frequencies for a powerful sound.</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd-name">/nightcore</span>
+                    <span class="cmd-desc">Speed up and pitch up your tracks instantly.</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd-name">/8d</span>
+                    <span class="cmd-desc">Experience an immersive 8D spatial audio effect.</span>
+                </div>
+            </div>
+            <div id="settings" class="tab-content">
+                <div class="command-item">
+                    <span class="cmd-name">/prefix</span>
+                    <span class="cmd-desc">Change the bot prefix for your server.</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd-name">/setup</span>
+                    <span class="cmd-desc">Create a dedicated music request channel.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="setup" class="setup">
+        <h2 class="section-title">How to Setup</h2>
+        <div class="setup-steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-text">
+                    <h3>Configure Environment</h3>
+                    <p>Open the <code>.env</code> file and add your <code>DISCORD_TOKEN</code> and <code>CLIENT_ID</code>.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-text">
+                    <h3>Install Dependencies</h3>
+                    <p>Open your terminal and run <code>npm install</code> to set up the engine.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-text">
+                    <h3>Start Streaming</h3>
+                    <p>Execute <code>npm start</code> and your Synapse Beats instance is live!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-card">
+            <h2>Ready to build your own?</h2>
+            <p>Join the server to get the source code its free!</p>
+            <a href="https://dsc.gg/axoninnova" class="btn primary">Join AxonInnova</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="logo-text">Synapse<span class="highlight">Beats</span></span>
+                <p>The ultimate music solution for modern Discord communities.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Community</h4>
+                <a href="https://dsc.gg/axoninnova">Support Server</a>
+                <a href="https://dsc.gg/axoninnova">AxonInnova</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AxonInnova Community. All rights reserved.</p>
+            <p class="subtext">Powered by Next-Gen Audio Engines. Fixed and optimized by the AxonInnova team.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
