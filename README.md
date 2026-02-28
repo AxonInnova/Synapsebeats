@@ -1,2 +1,1 @@
-# synapsedashboard
-dashboardforsynapse
+# comming soon
