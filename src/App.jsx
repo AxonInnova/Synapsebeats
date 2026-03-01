@@ -1,8 +1,7 @@
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Studio from './pages/Studio';
-import ProjectPage from './pages/ProjectPage';
-import BotDocs from './pages/BotDocs';
+import Bot from './pages/Bot';
 
 export default function App() {
   return (
@@ -21,8 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/studio" element={<Studio />} />
-          <Route path="/projects/:id" element={<ProjectPage />} />
-          <Route path="/bot" element={<BotDocs />} />
+          <Route path="/bot" element={<Bot />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

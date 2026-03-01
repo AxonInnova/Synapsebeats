@@ -1,13 +1,30 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { signInWithDiscord, signInWithEmail } from '../lib/auth';
+import { supabase } from '../supabase';
 
 export default function Home() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const handleDiscordLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'discord',
+      options: { redirectTo: window.location.origin }
+    });
+
+    if (error) {
+      setMessage(error.message);
+    }
+  };
+
   const handleEmailLogin = async () => {
-    const { error } = await signInWithEmail(email);
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        emailRedirectTo: window.location.origin
+      }
+    });
+
     if (error) {
       setMessage(error.message);
       return;
@@ -27,7 +44,7 @@ export default function Home() {
         <h3>Auth</h3>
         <p>Sign in with Discord or email to save projects.</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-          <button onClick={signInWithDiscord}>Continue with Discord</button>
+          <button onClick={handleDiscordLogin}>Continue with Discord</button>
           <input
             type="email"
             value={email}
