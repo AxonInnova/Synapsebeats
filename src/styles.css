@@ -1,0 +1,104 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #e2e8f0;
+  background: #020617;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1e1b4b, #020617 45%);
+  min-height: 100vh;
+}
+
+a {
+  color: #c4b5fd;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.topnav {
+  display: flex;
+  gap: 14px;
+}
+
+.topnav a {
+  text-decoration: none;
+}
+
+.main-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 28px 16px 60px;
+}
+
+.card {
+  border: 1px solid #334155;
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  margin-top: 6px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #fff;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+button,
+.btn-link {
+  border: 1px solid #7c3aed;
+  background: #7c3aed;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: transparent;
+}

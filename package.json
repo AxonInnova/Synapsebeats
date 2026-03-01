@@ -1,0 +1,25 @@
+{
+  "name": "synapse-beats",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start-bot": "node bot/index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.4.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.1",
+    "tone": "^15.1.22"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "vite": "^5.4.11"
+  }
+}
