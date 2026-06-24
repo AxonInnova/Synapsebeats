@@ -9,6 +9,7 @@ Live site: https://synapsebeats.is-a.software
 - Vite + React
 - React Router
 - Supabase Auth
+- dc library
 
 ## Auth model
 
