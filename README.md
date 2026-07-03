@@ -54,6 +54,6 @@ npm run preview
 ## Credits (README only)
 
 - Organization: AxonInnova
-- Founder: Atharv Singh Negi
+- Founder: Atharv 
  
 Founder and org credits stay in repository metadata/docs only and are not shown in website UI.
